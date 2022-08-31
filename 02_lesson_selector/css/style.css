@@ -1,0 +1,50 @@
+/* * {
+    font-family: monospace;
+} */
+
+/* Mais interessante usar os dados de tamanho no seletor HTML */
+html {
+    font-size: 22px;
+}
+
+/* body {
+    font-size: 22px;
+} */
+
+h1, h2 {
+    color: blue;
+}
+
+.gray {
+    color: gray;
+}
+
+/* /!important força a especificidade não é uma boa prática usar */
+/* p {
+    color: purple !important;
+} */
+
+p {
+    color: purple;
+}
+
+p {
+    color: red;
+}
+
+/* busca o span que esteja dentro de um p*/
+/* p span {
+    text-transform: uppercase;
+    background-color: gold;
+} */
+
+/* Assim é mais interessante pq é reusável */
+.highlight {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+
+#second {
+    font-style: italic;
+}
