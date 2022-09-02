@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div{
+            font-size: 16px;
+        }
+    
+        #filho{
+            font-size: 2em;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="pai">
+        div pai
+        <div id="filho">
+            div filho
+        </div>
+    </div>
+    <p>Nesse nosso caso, para a div mais interna (id=filho), 1em será igual a 16px, seguindo a lógica, 2em será igual a 32px e assim por diante. Podemos colocar valores como 1.5 também! Nesse nosso caso, 1.5em será igual a 24px Quando expressamos tamanhos como margin, padding utilizando em, isso significa que eles serão relativos ao tamanho da fonte do elemento pai.</p>
+
+
+    <article>
+        <h3>Base Para REM 16px</h3>
+        <ul>
+            <li>10px = 0.625rem</li>
+            <li>12px = 0.75rem</li>
+            <li>14px = 0.875rem</li>
+            <li>16px = 1rem</li>
+            <li>18px = 1.125rem</li>
+        </ul>
+
+        <h3>Truques para deixar os valores mais aceitáveis</h3>
+        <pre>
+        html{
+            font-size: 62,5%;
+        }
+        
+        h1{
+            font-size: 1.2rem;  /*equivalente a 12px*/
+        }
+        
+        p{
+            font-size: 2.4rem; /*equivalente a 24px*/
+        </pre>
+
+        <p>
+            Existe uma terceira visão sobre isso tudo. Essa solução utiliza px, em e rem de maneira bem definida. A ideia consiste em definir o <code>font-size</code> do elemento root em píxel, módulos utilizando rem e elementos interiores aos módulos utilizando em, facilitando a manipulação do tamanho global que naturalmente escalará o tamanho para os módulos (utilizando rem) e esses por sua vez escalarão os elementos interiores (que utilizam em e referenciam ao elemento pai).
+        </p>
+    </article>
+
+    <article>
+        <h3>Vw (viewport width)</h3>
+        <p>
+            Viewport nada mais é que a área visível de uma página web para o seu usuário, essa viewport pode variar de acordo com o dispositivo, sendo menor em celulares e maior em desktops.
+        </p>
+        <p>
+            Voltando para o nosso querido vw, essa unidade se relaciona diretamente com a largura da viewport, onde 1vw representa 1% do tamanho da largura dessa área visível. A diferença entre vw e a % é bem semelhante a diferença entre em e rem, onde a % é relativa ao contexto local do elemento e o vw é relativo ao tamanho total da largura da viewport do usuário
+        </p>
+    </article>
+</body>
+</html>
